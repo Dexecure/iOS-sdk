@@ -62,7 +62,7 @@ The Dexecure Swift client is compatible with Swift 4.2.
 
    import Dexecure
 
-// Set up an ImgixClient
+// Set up an DexecureClient
 
    let client = Dexecure.init(host: "beek.dexecure.net")
 
