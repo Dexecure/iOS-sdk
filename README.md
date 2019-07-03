@@ -1,4 +1,11 @@
 # iOS-sdk
 iOS-SDK for Dexecure.
 
-Dexecure’s asset optimizer compresses media assets automatically with zero configuration based on the device, operating system and the network the user is on
+Dexecure’s asset optimizer compresses media assets automatically with zero configuration based on the device, operating system and the network the user is on.
+
+# CocoaPods
+To integerate Dexecure into your Xcode project using Cocoapods , specify it in your Podfile:
+
+pod 'Dexecure' , '~> 0.0.1'
+
+
