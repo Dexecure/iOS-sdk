@@ -53,3 +53,20 @@ It should appear nested underneath your application's blue project icon. Whether
 And that's it!
 
 The Dexecure.framework is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
+
+# Usage
+
+The Dexecure Swift client is compatible with Swift 4.2.
+
+// Import the framework
+import Dexecure
+
+// Set up an ImgixClient
+let client = Dexecure.init(host: "beek.dexecure.net")
+
+// Build a basic URL
+client.buildUrl("/proxy/http://demos.imgix.net/bridge.png") // => https://beek.dexecure.net/proxy/http://demos.imgix.net/bridge.png
+
+// Add some parameters
+client?.buildUrl("/proxy/http://demos.imgix.net/bridge.png", params: [Constants.Key.height : "200"]) // => http://beek.dexecure.net/proxy/http://demos.imgix.net/bridge.png?resize=h200
+
