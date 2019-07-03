@@ -21,32 +21,34 @@ github "Dexecure/iOS-sdk" ~> 0.0.1
 
 you can integrate Dexecure into your project manually.
 
-. Embedded Framework
-  Open up Terminal, cd into your top-level project directory, and run the following command "if" your project is not       initialized as a git repository:
-
+* Embedded Framework
+  Open up Terminal, cd into your top-level project directory, and run the following command "if" your project is not        initialized as a git repository:
+  
   $ git init
-Add Dexecure as a git submodule by running the following command:
+  
+* Add Dexecure as a git submodule by running the following command:
 
 $ git submodule add https://github.com/Dexecure/iOS-sdk.git
-Open the new Dexecure folder, and drag the Dexecure.xcodeproj into the Project Navigator of your application's Xcode project.
 
-It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode groups does not matter.
+* Open the new Dexecure folder, and drag the Dexecure.xcodeproj into the Project Navigator of your application's Xcode project.
 
-Select the Dexecure.xcodeproj in the Project Navigator and verify the deployment target matches that of your application target.
+It should appear nested underneath your application's blue project icon. Whether it is above or below all the other Xcode  groups does not matter.
 
-Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
+* Select the Dexecure.xcodeproj in the Project Navigator and verify the deployment target matches that of your application   target.
 
-In the tab bar at the top of that window, open the "General" panel.
+* Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the "Targets" heading in the sidebar.
 
-Click on the + button under the "Embedded Binaries" section.
+* In the tab bar at the top of that window, open the "General" panel.
 
-You will see two different Dexecure.xcodeproj folders each with two different versions of the Dexecure.framework nested inside a Products folder.
+* Click on the + button under the "Embedded Binaries" section.
 
-It does not matter which Products folder you choose from, but it does matter whether you choose the top or bottom Dexecure.framework.
+* You will see two different Dexecure.xcodeproj folders each with two different versions of the Dexecure.framework nested inside a Products folder.
 
-Select the top Dexecure.framework.
+* It does not matter which Products folder you choose from, but it does matter whether you choose the top or bottom Dexecure.framework.
 
-You can verify which one you selected by inspecting the build log for your project. The build target for Dexecure will be listed.
+* Select the top Dexecure.framework.
+
+* You can verify which one you selected by inspecting the build log for your project. The build target for Dexecure will be listed.
 
 And that's it!
 
