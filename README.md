@@ -56,6 +56,8 @@ The Dexecure.framework is automagically added as a target dependency, linked fra
 
 # Usage
 
+ # Swift
+
 The Dexecure Swift client is compatible with Swift 4.2.
 
 // Import the framework
@@ -74,3 +76,24 @@ The Dexecure Swift client is compatible with Swift 4.2.
 
   client?.buildUrl("/proxy/http://demos.imgix.net/bridge.png", params: [Constants.Key.height : "200"]) // => http://beek.dexecure.net/proxy/http://demos.imgix.net/bridge.png?resize=h200
 
+ 
+# Objective-C
+
+your project doesn't contain any other Swift code, make sure to set your target's Build Settings > Build Options > Embedded Content Contains Swift Code to YES.
+
+// Import the framework
+
+  #import <Dexecure/Dexecure.h>
+
+// Set up an DexecureClient
+
+ Dexecure *client = [[Dexecure alloc] initWithHost:@"beek.dexecure.net"];
+
+// Build a basic URL
+
+ [client buildUrl:@"/proxy/http://demos.imgix.net/bridge.png"]; // =>  https://beek.dexecure.net/proxy/http://demos.imgix.net/bridge.png
+
+// Add some parameters
+[client buildUrl:@"/proxy/http://demos.imgix.net/bridge.png", params:@{
+  @Constants.Key.height: @300
+}]; // => http://beek.dexecure.net/proxy/http://demos.imgix.net/bridge.png?resize=h300
