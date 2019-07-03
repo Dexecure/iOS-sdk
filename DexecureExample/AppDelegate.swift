@@ -2,7 +2,6 @@
 //  AppDelegate.swift
 //  DexecureExample
 //
-//  Created by Anupriya on 03/07/19.
 //  Copyright © 2019 net.Dexecure. All rights reserved.
 //
 
